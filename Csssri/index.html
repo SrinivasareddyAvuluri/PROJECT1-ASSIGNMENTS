@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> it is my personal information home Screen</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Hobby.html">Hobby</a></li>
+          <li><a href="HomeTownPage1.HTML">Hometown</a></li>
+          <li><a href="https://www.google.com/">Google</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p>Hi, I'm [Srinivas Reddy] and it is my personal information. I'm a [Student]  in OCU university and enrolled for SE project-1.</p>
+      </section>
+        <!-- Login Form Section -->
+  <section>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+      <button type="submit">Login</button>
+      <button type="button" onclick="forgotPassword()">Forgot Password</button>
+      <button type="button" onclick="resetFields()">Clear</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2023 [Your Name]</p>
+</footer>
+<script>
+  function forgotPassword() {
+    // Add functionality for forgot password button
+    console.log("Forgot Password button clicked");
+    // TODO: Implement forgot password logic
+  }
+
+  function resetFields() {
+    // Reset username and password fields
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+  }
+
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    // TODO: Implement login logic using username and password
+    console.log("Login clicked. Username: " + username + ", Password: " + password);
+    // Reset fields after login attempt
+    resetFields();
+  });
+</script>
+
+
+    </main>
+    <footer>
+      <p>Copyright &copy;  [Srinivas Reddy]</p>
+    </footer>
+  </body>
+</html>
